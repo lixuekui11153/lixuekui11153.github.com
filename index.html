@@ -1,97 +1,24 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>无标题文档</title>
-    <style>
-        #small {
-            width: 200px;
-            height: 200px;
-            border: 1px solid #000;
-            float: left;
-            position: relative;
-        }
-
-        #small img {
-            width: 180px;
-            height: 180px;
-            margin: 10px;
-        }
-
-        #mask {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 60px;
-            height: 60px;
-            background: yellow;
-            opacity: .5;
-            display: none;
-        }
-
-        #big {
-            width: 200px;
-            height: 200px;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #000;
-            display: none;
-        }
-
-        #big img {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-        }
-
-    </style>
-    <script>
-        window.onload = function () {
-            var oSmall = document.getElementById('small');
-            var oMask = document.getElementById('mask');
-            var oBig = document.getElementById('big');
-            var oShow = document.getElementById('show');
-            oSmall.onmouseenter = function () {
-                oMask.style.display = 'block'
-                oBig.style.display = 'block'
-            };
-            oSmall.onmouseleave = function () {
-                oMask.style.display = 'none'
-                oBig.style.display = 'none'
-            };
-            oSmall.onmousemove = function (ev) {
-                var oEvent = ev || event;
-                var l = oEvent.clientX - oMask.offsetWidth / 2;
-                var t = oEvent.clientY - oMask.offsetHeight / 2;
-                if (l < 0) {
-                    l = 0;
-                } else if (l >= oSmall.offsetWidth - oMask.offsetWidth) {
-                    l = oSmall.offsetWidth - oMask.offsetWidt;
-                }
-                ;
-                if (t < 0) {
-                    t = 0;
-                } else if (t >= oSmall.offsetHeight - oMask.offsetHeight) {
-                    t = oSmall.offsetHeight - oMask.offsetHeight;
-                }
-                ;
-                oMask.style.left = l + 'px';
-                oMask.style.top = t + 'px';
-                oShow.style.left = -l * (oShow.offsetWidth - oBig.offsetWidth) / (oSmall.offsetWidth - oMask.offsetWidth) + 'px';
-                oShow.style.top = -t * (oShow.offsetHeight - oBig.offsetHeight) / (oSmall.offsetHeight - oMask.offsetHeight) + 'px';
-            };
-        }
-    </script>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="base/base.css"/>
+<link rel="stylesheet" href="base/index.css"/>
+<script src="js/myrack.js"></script>
+<script src="js/index.js"></script>
 </head>
 
 <body>
-<div id="small">
-    <img src="nn.jpg"/>
-    <span id="mask"></span>
+<!--first_page-->
+<div class="first_page"></div>
+<div class="recommend">
+    <p>说&nbsp;&nbsp;说</p>
+    <div id="box"></div>
 </div>
-<div id="big">
-    <img src="nn.jpg" id="show"/>
+<div class="enter">
+    <a href="file:///F:/my_works/index1/index1.html">点击步入秘籍天堂</a>
+    <a href="file:///F:/my_works/index1/index1.html" class="mask">点击步入秘籍天堂</a>
 </div>
-
 </body>
 </html>

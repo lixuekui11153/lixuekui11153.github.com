@@ -1,0 +1,103 @@
+body{
+    background:#909090;
+}
+html{
+    overflow: hidden;
+}
+.head{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #fede15;
+    text-align: center;
+    color: black;
+    font:24px 'Microsoft YaHei';
+    position:relative;
+}
+ul{
+    width:740px;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    margin-left: -370px;
+}
+#box li{
+    width:160px;
+    height:0px;
+    float:left;
+    margin-right:20px;
+    border-radius:10px;
+}
+#ul1 li{
+    width:160px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    float:left;
+    margin-right:20px;
+    border-radius:10px;
+    box-shadow:0px 6px 1px #fff;
+    position:relative;
+    z-index: 3;
+    transition:.4s all ease;
+}
+#ul1 li a{
+    width: 100%;
+    color:#fff;
+}
+#ul1 .active{
+    background: mediumblue;
+}
+#ul1 li:active{
+    box-shadow:0px 2px 1px #000; top:4px;
+}
+#div2{
+    width:660px;
+    margin:120px auto;
+    -display:none;
+}
+#div2 .box{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor:pointer;
+    transform-style: preserve-3d;
+    transform:perspective(800px) rotateY(0deg);
+    transition: 1s all ease;
+}
+#div2 .box div{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+
+
+}
+#div2 .box .front{
+    background: #399;
+    transform: translateZ(1px);
+}
+#div2 .box .back{
+    background: #96c;
+    transform: translateZ(-1px) scale(-1,1);
+}
+#div2 .box .back a{
+    display: block;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+#div2 .box:hover{
+    cursor:pointer;
+    transform:perspective(1500px) rotateY(-180deg);
+    transition:2s all linear;
+}
+
+
+

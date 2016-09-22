@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="text">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base/base.css"/>
+    <link rel="stylesheet" href="style/index2.css"/>
+    <script src="js/myrack.js"></script>
+    <script src="js/index2.js"></script>
+    <script src="js/index2.2.js"></script>
+    <script src="style/angular.js"></script>
+    <script src="js/index2.3.js"></script>
+</head>
+<body>
+<!--head-->
+<div class="w head">
+    <h3>李雪魁&nbsp;JS--剑术"理论</h3>
+    <ul id="ul1" >
+        <li><a href="file:///F:/my_works/index1/index1.html">首页</a></li>
+        <li class="active"><a href="file:///F:/my_works/index2/index2.html">剑术"理论</a></li>
+        <li><a href="file:///F:/my_works/index3/index3.html">前段实践</a></li>
+        <li ><a href="file:///F:/my_works/index4/index4.html">HTML5</a></li>
+    </ul>
+    <ul id="box" class="clearfix">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="znsArea" id="div1">
+    <div class="content" >
+        <!--<h2>打款发货的时间看房活动是空号</h2>-->
+        <!--<div class="clearfix">-->
+            <!--<span class="fl">作者：阮一峰</span>-->
+            <!--<span class="fr">2016-09-09</span>-->
+        <!--</div>-->
+        <!--<div class="clearfix">-->
+            <!--<p class="pro">废话多舒服就好多舒服就好的设计开发大水库附近的数据库佛挡杀佛加快速度和-->
+                <!--就是肯定会接口是否速度加快和代课教师代课教师分等级考试好</p>-->
+            <!--<a href="javascript" class="fr">点击查看详情>></a>-->
+        <!--</div>-->
+    </div>
+    <!--留言-->
+    <div class="head_b" ng-controller="msg_add">
+        <h1 class="Msg_board">建议留言板</h1>
+        <div class="inp">
+            江湖称号: <input type="text" ng-model="username"/><br><br>
+            江湖职业: <input type="text" ng-model="job" ng-keyup="kp($event)"/><br><br>
+            您的建议: <textarea  ng-model="pro"></textarea><br>
+            <input type="button" value="提交建议" ng-click="add()" />
+        </div>
+        <div ng-show="data.length==0" class="no_p">
+            暂无留言
+        </div>
+        <ul class="box1">
+            <!--item in data angular里的循环样式  在需要内容的地方加相应的值。-->
+            <li ng-repeat="item in data" class="clearfix">
+                <div class="content">
+                    <h2 class="col">我就是喜欢您来这里叨叨，买彩票您中奖{{$index+1}}亿</h2>
+                    <div class="clearfix">
+                        <span class="fl c_l">江湖称号：{{item.name}}</span>
+                        <span class="fr c_r">江湖职业：{{item.job}}</span>
+                    </div>
+                    <div class="clearfix">
+                        <p class="pro">{{item.pro}}</p>
+                        <a href="javascript:;" class="fr del"  ng-click="delete($index)">删除</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clock">
+    <div class="hour"></div>
+    <div class="min"></div>
+    <div class="sec"></div>
+    <div class="cap"></div>
+</div>
+</body>
+</html>
