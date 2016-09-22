@@ -4,7 +4,7 @@
 (function(){
     DOMReady(function(){
         var oA=new Audio();
-        oA.src='mp3/千千阙歌.mp3';
+        oA.src='mp3/夜的钢琴曲.mp3';
         oA.play();
         var str='本人从事网络前端工作已经2年，虽说不是前端大拿，但也许会有吸引你的地方，欢迎点击查看，谢谢到访！';
         for(var i=0;i<str.length;i++){
