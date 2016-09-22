@@ -29,7 +29,6 @@
         }
         //留言
         var arr=eval(str);
-        console.log(arr);
         for(var i=0;i<arr.length;i++){
             var oDiv=document.createElement('div');
             oDiv.innerHTML=
