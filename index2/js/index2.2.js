@@ -3,9 +3,6 @@
  */
 (function(){
     DOMReady(function(){
-        var oA=new Audio();
-        oA.src='mp3/千千阙歌.mp3';
-        oA.play();
         var oUl=document.getElementById('ul1');
         var aLi=oUl.getElementsByTagName('li');
         var oBox=document.getElementById('box');

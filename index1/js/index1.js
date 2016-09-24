@@ -3,9 +3,6 @@
  */
 (function(){
     DOMReady(function(){
-        var oA=new Audio();
-        oA.src='mp3/徐歌阳 - 一万次悲伤(Live).mp3';
-        oA.play();
         var oUl=document.getElementById('ul1');
         var aLi=oUl.getElementsByTagName('li');
         var oBox=document.getElementById('box');
@@ -73,6 +70,7 @@
                                                     width:70,
                                                     height:70,
                                                     opacity:1
+                                                    // filter:alpha(opacity=100)
                                                 },{
                                                     complete:function(){
                                                         if(t==0){

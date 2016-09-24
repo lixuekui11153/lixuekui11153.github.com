@@ -3,9 +3,6 @@
  */
 (function(){
     $(function(){
-        var oA=new Audio();
-        oA.src='../mp3/雨的印记.mp3';
-        oA.play();
         var oUl=document.getElementById('ul1');
         var aLi=oUl.getElementsByTagName('li');
         var oBox=document.getElementById('box');
@@ -48,15 +45,17 @@
                 });
             });
             var n=3;
-            for(var i=0;i<aLi.length;i++){
-                aLi[i].onmouseover=function(){
-                    move(this,{width:240,height:240,marginLeft:-45,marginTop:-45});
-                    this.style.zIndex=n++;
-                }
-                aLi[i].onmouseout=function(){
-                    move(this,{width:150,height:150,margin:0});
-                }
-            }
+            aLi.each(function(index){
+                aLi.eq(index).on('mouseenter',function(){
+                    aLi.eq(index).animate({width:240,height:240,marginLeft:-45,marginTop:-45});
+                    aLi.eq(index).css({
+                        zIndex:n++
+                    });
+                });
+                aLi.eq(index).on('mouseleave',function(){
+                    aLi.eq(index).animate({width:150,height:150,margin:0});
+                });
+            });
             $('#btn').on('click',function(){
                 clearInterval(timer);
                 if(!onOff)return;

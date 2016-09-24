@@ -2,7 +2,7 @@
 /* CSS Document */
 body{background:url(../images/a.png);}
 .first_page{
-    background: url(../images/tao.png);
+    background: url(../images/tao.jpg) no-repeat;
     width:800px;
     height: 550px;
     margin-left: 100px;
@@ -26,6 +26,9 @@ body{background:url(../images/a.png);}
     font:bold 50px 'Microsoft YaHei';
     color:chocolate;
     text-shadow: 2px 2px 0px #fff,4px 4px 0 chocolate;
+    -webkit-text-shadow: 2px 2px 0px #fff,4px 4px 0 chocolate;
+    -moz-text-shadow: 2px 2px 0px #fff,4px 4px 0 chocolate;
+    -ms-text-shadow: 2px 2px 0px #fff,4px 4px 0 chocolate;
 }
 #box{
     width:400px;
@@ -36,7 +39,13 @@ body{background:url(../images/a.png);}
 #box span{
     font: 18px/24px 'microsoft yahei';
     text-shadow:10px 10px 80px #fff;
+    -webkit-text-shadow:10px 10px 80px #fff;
+    -moz-text-shadow:10px 10px 80px #fff;
+    -ms-text-shadow:10px 10px 80px #fff;
     transition:1s all ease; width:20px;
+    -webkit-transition:1s all ease; width:20px;
+    -moz-transition:1s all ease; width:20px;
+    -ms-transition:1s all ease; width:20px;
     display:block;
     position:absolute;
 }
@@ -61,11 +70,32 @@ body{background:url(../images/a.png);}
 }
 .enter a.mask{
     background:linear-gradient(-45deg,rgba(255,255,255,0) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 60%);
+    background:-webkit-linear-gradient(-45deg,rgba(255,255,255,0) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 60%);
+    background:-moz-linear-gradient(-45deg,rgba(255,255,255,0) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 60%);
+    background:-ms-linear-gradient(-45deg,rgba(255,255,255,0) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 60%);
     color:rgba(0,0,0,0);
+    background-clip:text;
     -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -ms-background-clip:text;
     animation:4s linear move infinite;
+    -webkit-animation:4s linear move infinite;
+    -moz-animation:4s linear move infinite;
+    -ms-animation:4s linear move infinite;
 }
 @keyframes move{
+    from{background-position:-200px 0}
+    to{background-position:600px 0}
+}
+@-webkit-keyframes move{
+    from{background-position:-200px 0}
+    to{background-position:600px 0}
+}
+@-moz-keyframes move{
+    from{background-position:-200px 0}
+    to{background-position:600px 0}
+}
+@-o-keyframes move{
     from{background-position:-200px 0}
     to{background-position:600px 0}
 }

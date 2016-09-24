@@ -4,7 +4,7 @@
 (function(){
     DOMReady(function(){
         var oA=new Audio();
-        oA.src='mp3/夜的钢琴曲.mp3';
+        oA.src='mp3/宗次郎 - 故郷の原風景 - 纯音乐版.mp3';
         oA.play();
         var str='本人从事网络前端工作已经2年，虽说不是前端大拿，但也许会有吸引你的地方，欢迎点击查看，谢谢到访！';
         for(var i=0;i<str.length;i++){
@@ -38,6 +38,9 @@
             (function(obj,index){
                 setTimeout(function(){
                     obj.style.textShadow='10px 10px 0 #fff';
+                    obj.style.WebkitTextShadow='10px 10px 0 #fff';
+                    obj.style.MozTextShadow='10px 10px 0 #fff';
+                    obj.style.MsTextShadow='10px 10px 0 #fff';
                 },index*400);
             })(oSpan,i);
         }
@@ -45,3 +48,5 @@
 
     })
 })();
+
+

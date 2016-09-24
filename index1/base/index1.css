@@ -37,9 +37,15 @@ ul{
     margin-right:20px;
     border-radius:10px;
     box-shadow:0px 6px 1px #000;
+    -webkit-box-shadow:0px 6px 1px #000;
+    -moz-box-shadow:0px 6px 1px #000;
+    -ms-box-shadow:0px 6px 1px #000;
     position:relative;
     z-index: 3;
     transition:.4s all ease;
+    -webkit-transition:.4s all ease;
+    -moz-transition:.4s all ease;
+    -ms-transition:.4s all ease;
 }
 #ul1 li a{
     width: 100%;
@@ -50,6 +56,9 @@ ul{
 }
 #ul1 li:active{
     box-shadow:0px 2px 1px #000; top:4px;
+    -webkit-box-shadow:0px 2px 1px #000; top:4px;
+    -moz-box-shadow:0px 2px 1px #000; top:4px;
+    -ms-box-shadow:0px 2px 1px #000; top:4px;
 }
 .content{
     margin-top:116px;
@@ -76,7 +85,6 @@ ul{
     line-height: 40px;
     margin-left: 50px;
     font:30px 'microsoft yahei';
-    -webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(255,0,0,0),rgba(255,255,255,1));
 }
 .content .first p{
     line-height: 26px;
@@ -105,7 +113,6 @@ ul{
     line-height: 40px;
     margin-left: 50px;
     font:30px 'microsoft yahei';
-    -webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(255,0,0,0),rgba(255,255,255,1));
 }
 .content .four{
     background:navy;
@@ -122,7 +129,6 @@ ul{
     line-height: 40px;
     margin-left: 50px;
     font:30px 'microsoft yahei';
-    -webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(255,0,0,0),rgba(255,255,255,1));
 
 }
 #ad{
@@ -160,6 +166,7 @@ ul{
     cursor:pointer;
     position: relative;
     z-index: 1;
+    zoom:1;
 }
 .two ul li a{
     width:100%;
@@ -206,7 +213,7 @@ ul{
     text-align: center;
     color: #fff;
 }
-.play { width: 330px; height: 180px; position: absolute; top:70px;left:20px; overflow: hidden;}
+.play {width: 330px; height: 180px; position: absolute; top:70px;left:20px; overflow: hidden;}
 .play ol { position: absolute; right: 90px; bottom: 90px; z-index: 2; }
 .play ol li { float: left; opacity: 0.8; display: inline; cursor: pointer; background: #fcf2cf; border: 1px solid #f47500; padding: 2px 6px; margin:3px; color: #d94b01; font-family: arial; font-size: 12px; transition: .4s all ease;}
 .play .active {  padding: 3px 8px; font-weight: bold; color: #ffffff; background: #ffb442; position: relative; bottom: 2px; transform:rotate(360deg);}

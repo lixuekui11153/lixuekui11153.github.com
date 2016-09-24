@@ -3,9 +3,6 @@
  */
 (function(){
     DOMReady(function(){
-        var oA=new Audio();
-        oA.src='../mp3/夜的钢琴曲.mp3';
-        oA.play();
         var oUl=document.getElementById('ul1');
         var aLi=oUl.getElementsByTagName('li');
         var oBox=document.getElementById('box');

@@ -139,7 +139,9 @@ font: 22px 'Microsoft YaHei';
 .clock{
     width:200px;
     height:200px;
+    background: -moz-radial-gradient(center center,circle, #eee,#666);
     background: -webkit-radial-gradient(center center,circle, #eee,#666);
+    background: -ms-radial-gradient(center center,circle, #eee,#666);
     /*background: url(tick.png) no-repeat;*/
     background-size: cover;
     border-radius: 50%;
@@ -153,6 +155,8 @@ font: 22px 'Microsoft YaHei';
     width: 20px;
     height: 20px;
     background: -webkit-radial-gradient(center center,circle,#ccc,#000);
+    background: -moz-radial-gradient(center center,circle,#ccc,#000);
+    background: -ms-radial-gradient(center center,circle,#ccc,#000);
     position: absolute;
     left: 50%;
     top: 50%;
